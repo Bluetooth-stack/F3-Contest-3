@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.right{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s ease-out;
+}
+
+.right a::before{
+    content: '';
+    height: 2px;
+    width: 110%;
+    transform: scaleX(0);
+    background-color: white;
+    border: 2px;
+    position: absolute;
+    bottom: -6px;
+    left: -1px;
+    transform-origin: bottom left;
+    transition: 0.4s ease-out;
+}
+
+.right a:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.container{
+    height: 80vh;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#form{
+    height: 800px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid blue; */
+}
+
+#form h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+#form input{
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.767);
+    padding: 10px 4px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+#form input:focus{
+    outline: none;
+    transform: scale(1.06);
+    box-shadow: 0 0 5px grey;
+    border-bottom: none;
+}
+
+#form button{
+    align-self: flex-start;
+    width: 160px;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.4s ease-out;
+}
+
+#form button:hover{
+    background-color: rgb(67, 209, 11);
+    color: white;
+}
+
+#form .error{
+    color: red;
+}
+
+#form .success{
+    color: rgb(2, 194, 2);
+}
+
+.details{
+    margin-left: 18px;
+    margin-top: 50px;
+    width: 60%;
+    height: 330px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details h1{
+    border-bottom: 1px solid white;
+}
+
+.details h1 span{
+    font-size: 2.2rem;
+    color: rgb(3, 207, 3);
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.details button{
+    width: 140px;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.4s ease-out;
+}
+
+.details button:hover{
+    background-color: rgb(201, 46, 46);
+    color: white;
+}
